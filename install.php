@@ -2,7 +2,7 @@
 
 $test = false;
 while(!$test) {
-    echo "Quelle est l'ip du serveur de base de données ?\n";
+    echo "Quelle est l'ip ou le nom FQDN du serveur de base de données ?\n";
     $IPBDD = readline();
 
     echo "Quelle est la base de données ?\n";
