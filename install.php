@@ -2,16 +2,16 @@
 
 $test = false;
 while(!$test) {
-    echo "Quelle est l'ip du serveur de base de données ?";
+    echo "Quelle est l'ip du serveur de base de données ?\n";
     $IPBDD = readline();
 
-    echo "Quel est la base de données ?";
+    echo "Quelle est la base de données ?\n";
     $BDD = readline();
 
-    echo "Quel est l'utilisateur ayant les droits ?";
+    echo "Quel est l'utilisateur ayant les droits ?\n";
     $USERBDD = readline();
 
-    echo "Quel est son mot de passe ?";
+    echo "Quel est son mot de passe ?\n";
     $MDPBDD = readline();
 
 
@@ -40,7 +40,7 @@ fclose($fileopen);
 
 include ".".DIRECTORY_SEPARATOR."Modele".DIRECTORY_SEPARATOR."BDD.php";
 
-echo "Entrer le mot de passe de l'administrateur 'root' du logiciel :" ;
+echo "Entrer le mot de passe de l'administrateur 'root' du logiciel :\n" ;
 $mdp = readline();
 Utilisateur_Creer("root",$mdp,3);
-echo "installation finie. Vous devez supprimer ce fichier et le fichier bdd.sql (si tout fonctionne !).";
+echo "installation finie. \nVous devriez supprimer ce fichier et le fichier bdd.sql (si tout fonctionne !).";
