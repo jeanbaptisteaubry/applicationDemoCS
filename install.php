@@ -20,7 +20,7 @@ while(!$test) {
             array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         $test = true;
     } catch (PDOException $e) {
-        echo $e->errorInfo->getMessage();
+        echo $e->getMessage();
         echo "\n";
     }
 }
