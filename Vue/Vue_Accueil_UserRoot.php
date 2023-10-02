@@ -1,11 +1,16 @@
 <?php
-function Vue_Accueil_UserRoot($msgVue= "")
+function Vue_Accueil_UserRoot($msgVue= "", $titleApplication = "")
 {
     echo "
 
 <HTML>
-
-<body>";
+    <head>
+        <title>$titleApplication</title>
+        <meta charset='UTF-8'>
+    </head>
+<body>
+    <H1>$titleApplication</H1>
+    ";
 
 
     SousVue_Menu(3);

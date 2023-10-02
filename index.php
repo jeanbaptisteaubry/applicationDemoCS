@@ -32,6 +32,7 @@ else {
         $action  = "";
 }
 
+$titre = Parametre_SelectTitre();
 switch ($situation)
 {
     case "accueilPublic":

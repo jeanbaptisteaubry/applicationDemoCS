@@ -9,7 +9,7 @@ function Vue_Accueil($titre, $texte, $msgVue = "", $titleApplication = "")
     </head>
 
     <body>
-
+        <H1>$titleApplication</H1>
         ";
             SousVue_Menu(1);
         echo "

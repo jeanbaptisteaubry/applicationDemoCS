@@ -3,10 +3,10 @@ switch($action)
 {
     case "" :
         $page = Page_SelectById(1);
-        Vue_Accueil($page["titre"], $page["texte"]);
+        Vue_Accueil($page["titre"], $page["texte"], "", $titre);
         break;
     case "seConnecter":
-        Vue_SeConnecter();
+        Vue_SeConnecter("", $titre);
         break;
     case "connexion":
         if (isset($_REQUEST["pseudo"]) && isset($_REQUEST["motDePasse"]))
@@ -14,7 +14,7 @@ switch($action)
             $utilisateur = Utilisateur_Selection_ParPseudo($_REQUEST["pseudo"]);
             if(is_null($utilisateur) )
             {
-                Vue_SeConnecter("Mail inconnue");
+                Vue_SeConnecter("Mail inconnue", $titre);
             }
             else
             {
@@ -30,19 +30,19 @@ switch($action)
                             Vue_Accueil_Public();
                             break;
                         case 3:
-                            Vue_Accueil_root();
+                            Vue_Accueil_root("",$titre);
                             break;
                     }
                 }
                 else
                 {
 
-                    Vue_SeConnecter("mdp erroné inconnue");
+                    Vue_SeConnecter("mdp erroné inconnue",$titre);
                 }
             }
         }
         else{
-            Vue_SeConnecter("Il faut renseigner TOUS les champs");
+            Vue_SeConnecter("Il faut renseigner TOUS les champs",$titre);
         }
         break;
     case "mdpPerdu":
@@ -51,7 +51,7 @@ switch($action)
         session_destroy();
         unset($_SESSION);
         $page = Page_SelectById(1);
-        Vue_Accueil($page["titre"], $page["texte"]);
+        Vue_Accueil($page["titre"], $page["texte"],'', $titre);
         break;
 
 }

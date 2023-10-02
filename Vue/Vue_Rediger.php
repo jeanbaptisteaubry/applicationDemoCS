@@ -1,11 +1,14 @@
 <?php
-function Vue_Rediger($titre, $texte, $msgVue= "")
+function Vue_Rediger($titre, $texte, $msgVue= "", $titleApplication = "")
 {
     echo "
 <HTML>
-
+    <head>
+        <title>$titleApplication</title>
+        <meta charset='UTF-8'>
+    </head>
 <body>
-
+<H1>$titleApplication</H1>
 ";
 
     SousVue_Menu(3);

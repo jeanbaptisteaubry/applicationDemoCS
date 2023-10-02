@@ -76,3 +76,15 @@ function Page_SelectById($idPage)
     $page = $requetePreparee->fetch(PDO::FETCH_ASSOC);
     return $page;
 }
+
+function Parametre_SelectTitre()
+{
+    $connexionPDO = Creer_Connexion();
+    $requetePreparee = $connexionPDO->prepare(
+        'Select * from `parametre`  
+                    WHERE `parametre`.`titre` = "titreApplication";');
+
+    $reponse = $requetePreparee->execute(); //$reponse boolean sur l'état de la requête
+    $page = $requetePreparee->fetch(PDO::FETCH_ASSOC);
+    return $page["valeur"];
+}

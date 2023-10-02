@@ -1,17 +1,23 @@
 <?php
-function Vue_SeConnecter($msgVue= "")
+function Vue_SeConnecter($msgVue= "", $titleApplication = "")
 {
     echo "
 <HTML>
 
 <body>
-
+<H1>$titleApplication</H1>
 ";
 
     SousVue_Menu(1);
 
     echo "
-<H1>Se connecter</H1>";
+<H1>Se connecter</H1>
+
+    <head>
+        <title>$titleApplication</title>
+        <meta charset='UTF-8'>
+    </head>
+    ";
 
 
     if (isset($msgVue)) {

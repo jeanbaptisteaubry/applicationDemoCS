@@ -43,6 +43,13 @@ include ".".DIRECTORY_SEPARATOR."Modele".DIRECTORY_SEPARATOR."BDD.php";
 echo "Entrer le mot de passe de l'administrateur 'root' du logiciel :\n" ;
 $mdp = readline();
 Utilisateur_Creer("root",$mdp,3);
+echo "Base de données OK\n";
+
+echo "Quel sera le nom de cette application ? (Rep, Pro, Extra, ...)\n";
+$nomAppli = readline();
+$rqt = "UPDATE `parametre` SET `valeur` = '$nomAppli' WHERE `parametre`.`id` = 1;";
+$instancePdo->query($rqt);
+
 echo "installation finie. \nVous devriez supprimer ce fichier et le fichier bdd.sql (si tout fonctionne !).";
 die();
 ?>
