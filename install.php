@@ -5,10 +5,10 @@ while(!$test) {
     echo "Quelle est l'ip ou le nom FQDN du serveur de base de données ?\n";
     $IPBDD = readline();
 
-    echo "Quelle est la base de données ?\n";
+    echo "Quelle sera la base de données ?\n";
     $BDD = readline();
 
-    echo "Quel est l'utilisateur ayant les droits ?\n";
+    echo "Quel est l'utilisateur ayant les droits sur cette base de données ?\n";
     $USERBDD = readline();
 
     echo "Quel est son mot de passe ?\n";
@@ -44,3 +44,12 @@ echo "Entrer le mot de passe de l'administrateur 'root' du logiciel :\n" ;
 $mdp = readline();
 Utilisateur_Creer("root",$mdp,3);
 echo "installation finie. \nVous devriez supprimer ce fichier et le fichier bdd.sql (si tout fonctionne !).";
+die();
+?>
+SI LE PHP N'Est PAS ACTIF SUR VOTRE SERVEUR WEB.
+POUR L'ACTIVER :
+sudo apt-get install php
+sudo apt-get install php-mysql libapache2-mod-php
+sudo service apache2 restart
+
+puis relancer ce script.

@@ -1,5 +1,5 @@
 <?php
-session_start();
+@session_start();
 //Création du tableau des dossiers à parcourir
 $paths = array(
     join(DIRECTORY_SEPARATOR, [__DIR__, 'Modele']),

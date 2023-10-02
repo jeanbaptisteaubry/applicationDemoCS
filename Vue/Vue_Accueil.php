@@ -1,8 +1,12 @@
 <?php
-function Vue_Accueil($titre, $texte, $msgVue = "")
+function Vue_Accueil($titre, $texte, $msgVue = "", $titleApplication = "")
 {
     echo "
 <HTML>
+    <head>
+        <title>$titleApplication</title>
+        <meta charset='UTF-8'>
+    </head>
 
     <body>
 
