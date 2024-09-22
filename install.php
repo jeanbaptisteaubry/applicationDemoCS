@@ -72,7 +72,7 @@ while(!$test) {
         $MDPBDD = readline();
     }
 
-    if(!first && $choix <= 5) {
+    if(!$first && $choix <= 5) {
         try {
             $instancePdo = new PDO('mysql:host=' . $IPBDD . ';dbname=' . $BDD . ';charset=UTF8', $USERBDD, $MDPBDD,
                 array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
