@@ -72,7 +72,8 @@ while(!$test) {
         $MDPBDD = readline();
     }
 
-    if(!$first && $choix <= 5) {
+    if(!(!$first && $choix <= 5)) {
+        echo "Tentative de connexion à la base de données...\n";
         try {
             $instancePdo = new PDO('mysql:host=' . $IPBDD . ';dbname=' . $BDD . ';charset=UTF8', $USERBDD, $MDPBDD,
                 array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
